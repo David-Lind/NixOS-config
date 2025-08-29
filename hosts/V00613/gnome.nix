@@ -1,8 +1,10 @@
 { ... }:
 {
   # Desktop Environment
-  desktops.hyprland.enable = true;
-  desktops.hyprland.extraConfig = ''
+  services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
+
+  desktops.gnome.extraConfig = ''
     monitorv2 {
       output = eDP-1
       mode = 1920x1080@60
