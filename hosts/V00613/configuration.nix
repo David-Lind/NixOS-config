@@ -10,7 +10,21 @@
     ../../modules/hardware/gpu/amd.nix
     ../../modules/development/default.nix
     ../../modules/disko/btrfs_luks.nix
-    ./gnome.nix
+  ];
+
+  # Gnome desktop config
+  services.xserver.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
+
+  # For a minimal / barebones Gnome DE
+  services.gnome.core-apps.enable = true;
+  services.gnome.core-developer-tools.enable = true;
+  services.gnome.games.enable = false;
+  environment.systemPackages = with pkgs; [ gnome-console ];
+  environment.gnome.excludePackages = with pkgs; [
+    gnome-tour
+    gnome-user-docs
   ];
 
   filesystem.btrfs.enable = true;
