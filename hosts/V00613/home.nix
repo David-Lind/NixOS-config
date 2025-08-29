@@ -24,8 +24,8 @@ in
   programs = {
     git = {
       enable = true;
-      userName = "AlexBMJ";
-      userEmail = "33891167+AlexBMJ@users.noreply.github.com";
+      userName = "David Lind";
+      userEmail = "70724197+David-Lind@users.noreply.github.com";
     };
     direnv = {
       enable = true;
