@@ -13,11 +13,9 @@
   ];
 
   # Gnome desktop config
-  services.xserver.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
 
-  # For a minimal / barebones Gnome DE
   services.gnome.core-apps.enable = true;
   services.gnome.core-developer-tools.enable = true;
   services.gnome.games.enable = false;
