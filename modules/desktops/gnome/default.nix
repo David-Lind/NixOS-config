@@ -41,7 +41,6 @@ in
         gnome-user-docs
       ];
 
-
       environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
       # Terminal Emulator
@@ -62,9 +61,6 @@ in
         nerd-fonts.caskaydia-cove
         noto-fonts
       ];
-
-      # SSH
-      programs.ssh.startAgent = true; # gpg-agent emulates ssh-agent. So we can use both SSH and GPG keys.
 
       # Git
       programs.git = {
