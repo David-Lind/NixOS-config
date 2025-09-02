@@ -12,19 +12,6 @@
     ../../modules/disko/btrfs_luks.nix
   ];
 
-  # Gnome desktop config
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
-
-  services.gnome.core-apps.enable = true;
-  services.gnome.core-developer-tools.enable = true;
-  services.gnome.games.enable = false;
-  environment.systemPackages = with pkgs; [ gnome-console ];
-  environment.gnome.excludePackages = with pkgs; [
-    gnome-tour
-    gnome-user-docs
-  ];
-
   filesystem.btrfs.enable = true;
 
   users.mutableUsers = true;
@@ -44,6 +31,13 @@
       ./home.nix
     ];
   };
+
+  desktops.gnome.enable = true;
+
+  # gitkraken
+  environment.systemPackages = [
+    pkgs.gitkraken
+  ];
 
   services.resolved.enable = true;
   networking.networkmanager.enable = true;

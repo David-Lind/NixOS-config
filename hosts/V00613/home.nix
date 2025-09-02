@@ -11,7 +11,6 @@ in
 
   home.packages = with pkgs; [
     # Tools
-    swaybg # Wallpaper Tool
     sshfs # Remote filesystems over SSH
     wl-clipboard # Clipboard Manager
     firefox
@@ -21,7 +20,7 @@ in
     granted # AWS assume role
   ];
 
-  home.file.".icons/default".source = "${pkgs.vanilla-dmz}/share/icons/Vanilla-DMZ";
+  #home.file.".icons/default".source = "${pkgs.vanilla-dmz}/share/icons/Vanilla-DMZ";
 
   programs = {
     git = {
