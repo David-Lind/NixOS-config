@@ -1,4 +1,4 @@
-{ pkgs, ...}:
+{ pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
     nil # Nix LSP
@@ -10,6 +10,12 @@
     ripgrep
     jq
     socat
+
+    (python3.withPackages (
+      python-pkgs: with python-pkgs; [
+        pandas
+        requests
+      ]
+    ))
   ];
 }
-
