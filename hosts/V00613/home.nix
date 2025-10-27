@@ -16,7 +16,7 @@ in
     firefox
     zoom-us
     slack
-
+    netron # visualize neural nets
     granted # AWS assume role
   ];
 

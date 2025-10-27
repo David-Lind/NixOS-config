@@ -39,6 +39,9 @@
     pkgs.gitkraken
   ];
 
+  # flatpak
+  services.flatpak.enable = true;
+
   services.resolved.enable = true;
   networking.networkmanager.enable = true;
 
