@@ -18,6 +18,15 @@ in
     slack
     netron # visualize neural nets
     granted # AWS assume role
+    pipx
+
+    gst_all_1.gstreamer
+    gst_all_1.gst-plugins-base
+    gst_all_1.gst-plugins-good
+    gst_all_1.gst-plugins-bad
+    gst_all_1.gst-plugins-ugly
+    gst_all_1.gst-libav
+    gst_all_1.gst-vaapi
   ];
 
   #home.file.".icons/default".source = "${pkgs.vanilla-dmz}/share/icons/Vanilla-DMZ";
@@ -40,5 +49,13 @@ in
       assume = "source assume";
     };
   };
-
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      mkhl.direnv
+      llvm-vs-code-extensions.vscode-clangd
+      vscodevim.vim
+      yzhang.markdown-all-in-one
+    ];
+  };
 }

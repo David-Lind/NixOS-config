@@ -34,11 +34,6 @@
 
   desktops.gnome.enable = true;
 
-  # gitkraken
-  environment.systemPackages = [
-    pkgs.gitkraken
-  ];
-
   # flatpak
   services.flatpak.enable = true;
 
@@ -76,7 +71,10 @@
     vimAlias = true;
   };
 
-  configured.programs.vscode.enable = true;
+  # vscode
+  configured.programs.vscode = {
+    enable = true;
+  };
 
   networking.firewall.allowedUDPPorts = [
     53
