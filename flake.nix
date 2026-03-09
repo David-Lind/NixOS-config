@@ -47,6 +47,8 @@
     nixpkgs-stremio-server.url = "github:NixOS/nixpkgs/aae94e56a7b905281f007a5b70aa7ffff89aee57";
     transmission_4_5.url = "github:NixOS/nixpkgs/0c19708cf035f50d28eb4b2b8e7a79d4dc52f6bb";
 
+    engine-os.url = "path:/home/dl/dev/repos/engine-os-copy/engine-os";
+
     nur.url = "github:nix-community/NUR";
     nur.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
@@ -90,11 +92,5 @@
 
     vpn-confinement.url = "github:Maroka-chan/VPN-Confinement";
 
-    yuttari.url = "git+ssh://git@github.com/Maroka-chan/yuttari-rs";
-    yuttari.inputs.nixpkgs.follows = "nixpkgs-unstable";
-
-    hoyonix.url = "git+ssh://git@github.com/Maroka-chan/hoyonix";
-    hoyonix.inputs.nixpkgs.follows = "nixpkgs-unstable";
-    hoyonix.inputs.umu.follows = "umu";
   };
 }

@@ -2,6 +2,7 @@
   username,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 {
@@ -10,6 +11,7 @@
     ../../modules/hardware/gpu/amd.nix
     ../../modules/development/default.nix
     ../../modules/disko/btrfs_luks.nix
+    inputs.engine-os.nixosModules.dmcryptd
   ];
 
   filesystem.btrfs.enable = true;
